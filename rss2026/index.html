@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <script type="text/javascript"
+          src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Tactile Sensing for Robotic Foundation Models</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="nav">
+  <div class="nav-container">
+    <a href="#intro">Introduction</a>
+    <a href="#speakers">Speakers</a>
+    <a href="#call">Call for Papers</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#organizers">Organizers</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<div class="title-container">
+  <div style="text-align: center;">
+    <h1>Tactile Sensing for Robotic Foundation Models</h1>
+    <div class="subtitle" style="color: #ccc; margin: 20px">
+      RSS 2026 Workshop, July 2026
+    </div>
+    <div class="subtitle" style="color: #ccc; margin: 20px">
+      Location: TBA
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="section" id="intro">
+    <h2>Introduction</h2>
+    <p>
+      As industry—across both startups and big tech—continues to scale up data collection
+      for robotic foundation models, what role should tactile sensing play in this new era? This
+      is a highly open-ended yet fundamental question for the field. Addressing it requires
+      answering a series of more specific questions along the way, covering the full stack of
+      hardware, integration/system, and algorithm/model training.
+    </p>
+
+    <h3>(1) Hardware: What tactile sensing should look like at scale</h3>
+    <p>
+      In the foundation-model era, the central hardware question is no longer whether tactile
+      sensing is useful, but what form of tactile sensing can realistically scale across fleets of
+      data collectors or robots. As robotic foundation models push data collection to
+      unprecedented scale, tactile hardware faces a fundamental tension: richness vs.
+      scalability. Should the field pursue high-resolution, human-like tactile skins, or focus on
+      simpler, task-relevant signals that can be deployed across thousands of robots?
+    </p>
+    <p>
+      Specific open questions include: What is the minimum tactile signal that meaningfully
+      improves manipulation and interaction? Can low-cost, robust tactile sensors outperform
+      fragile, high-fidelity designs when deployed at scale? Where should touch live on the
+      robot—everywhere, or only at critical interaction points like fingertips and wrists? Rather
+      than asking how closely we can mimic human touch, this era invites us to ask: what
+      tactile sensing actually survives—and matters—at scale?
+    </p>
+
+    <h3>(2) Integration / System: How touch fits into robotic stacks</h3>
+    <p>
+      The value of tactile sensing emerges only when it is meaningfully integrated into the
+      overall robotic system. Designing sensors that produce high-resolution, human-like
+      touch signals is one challenge; integrating them into compact, scalable, and reliable
+      systems is another.
+    </p>
+    <p>
+      A central open question concerns form factor. Many state-of-the-art camera-based
+      tactile sensors offer rich signals but adopt bulky, box-like designs, with limited sensing
+      around edges and corners. This makes them difficult to integrate into existing grippers
+      or to deploy on curved and articulated surfaces. In contrast, skin-like or deformable
+      tactile sensors are easier to attach across diverse geometries, but often produce noisier,
+      lower-dimensional signals with less consistent calibration. Balancing signal richness
+      with ease of integration remains unresolved.
+    </p>
+    <p>
+      Beyond the sensor itself, tactile integration introduces system-level complexity. Tactile
+      devices often require dedicated electronics, control boards, and communication
+      pipelines, adding friction to robotic systems and large-scale data collection platforms
+      that are already complex. Seamlessly synchronizing tactile sensing with vision,
+      proprioception, and control remains an open systems challenge—and a critical barrier to
+      scaling touch beyond isolated demonstrations.
+    </p>
+
+    <h3>(3) Algorithms / Model Training: How foundation models should use touch</h3>
+    <p>
+      With scalable and easily integrable hardware in place, the final—and perhaps most
+      critical—question becomes: how do we effectively use tactile signals?
+    </p>
+    <p>
+      First, what role should simulation play? Is high-fidelity tactile simulation worth the
+      investment, given its promise for large-scale data generation, or do sim-to-real gaps
+      fundamentally limit its usefulness for touch?
+    </p>
+    <p>
+      Second, how should we learn tactile representations? What abstractions best capture
+      the information that matters for interaction—raw signals, learned latent embeddings, or
+      discrete contact events—and which of these representations generalize across sensor
+      designs and embodiments?
+    </p>
+    <p>
+      Finally, how should tactile sensing be incorporated into multimodal learning?
+      Synchronizing signals across modalities with vastly different frequencies is already
+      challenging, but learning effective multimodal representations is even harder. Should
+      models fuse all modalities jointly, learn meta-controllers that adaptively weight or switch
+      between them, or train modalities sequentially—using one to guide or supervise
+      another?
+    </p>
+
+    <h3>Intended Audience</h3>
+    <p>
+      The intended audience for this workshop includes researchers and practitioners
+      interested in the full tactile sensing stack, spanning hardware, systems, and learning.
+      We place special emphasis on how tactile sensing can contribute to robotic foundation
+      models and large-scale embodied learning.
+    </p>
+    <p>
+      The workshop will feature invited talks and panel discussions with leading experts from
+      both academia and industry, covering topics from frontier tactile sensor design and
+      tactile simulation to multimodal policy learning with touch. In addition, authors of
+      outstanding submitted papers will be invited to give short oral presentations, fostering
+      interaction between emerging work and established perspectives.
+    </p>
+  </div>
+
+  <div class="section" id="speakers">
+    <h2>Invited Speakers</h2>
+    <div class="people">
+      <a href="https://www.mustafamukadam.com/">
+        <img src="https://www.mustafamukadam.com/images/mustafa_headshot_color.jpg">
+        <div>Mustafa Mukadam</div>
+        <div class="aff">Amazon</div>
+      </a>
+
+      <a href="https://yunzhuli.github.io/">
+        <img src="https://yunzhuli.github.io/images/headshot-1.jpg">
+        <div>Yunzhu Li</div>
+        <div class="aff">Columbia University</div>
+      </a>
+
+      <a href="http://hxu.rocks/">
+        <img src="https://sqz.ac.cn/Public/Uploads/uploadfile2/images/20240904/1719471183323.png">
+        <div>Huazhe Xu</div>
+        <div class="aff">Tsinghua University</div>
+      </a>
+
+      <a href="https://rcalandra.github.io/">
+        <img src="https://rcalandra.github.io/img/profile.jpg">
+        <div>Roberto Calandra</div>
+        <div class="aff">TU Dresden</div>
+      </a>
+
+      <a href="https://jessicayin.com/">
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQHn09X4_flR_g/profile-displayphoto-shrink_200_200/B4DZPfo8GpGoAg-/0/1734623875855?e=2147483647&v=beta&t=tl_KHPVzCzE3nv--_vefIA3VdqIVp6iYtUY2-bq34BI">
+        <div>Jessica Yin</div>
+        <div class="aff">NVIDIA</div>
+      </a>
+
+    </div>
+  </div>
+  <br>
+
+  <div class="section" id="call">
+    <h2>Call for Papers</h2>
+    <p>
+      TBA
+    </p>
+
+    <h3>Submission Guidelines</h3>
+    <ul>
+      <li><b>Submission Portal:</b> TBA</li>
+      <li><b>Paper Length:</b> 4-page short papers, excluding references, acknowledgements, and appendices</li>
+      <li><b>Format:</b> Follows RSS 2026 main conference format</li>
+      <li><b>Dual Submission:</b> Papers to be submitted or in preparation for submission to other major venues are allowed. Published works are also welcome as long as explicitly stated at the time of submission.</li>
+    </ul>
+
+    <h3>Timeline</h3>
+    <ul>
+      <li>Submission Deadline: <b>TBA</b></li>
+      <li>Notification: <b>TBA</b></li>
+      <li>Workshop Date: <b>July 2026 (TBA)</b></li>
+    </ul>
+  </div>
+
+  <div class="section" id="schedule">
+    <h2>Workshop Schedule</h2>
+    <p><i>Tentative schedule (subject to change)</i></p>
+    <table>
+      <tr>
+        <th>Time</th>
+        <th>Event</th>
+      </tr>
+      <tr>
+        <td>8:30 - 8:35 (5 min)</td>
+        <td>Opening remarks</td>
+      </tr>
+      <tr>
+        <td>8:35 - 9:00 (25 min)</td>
+        <td>Speaker 1</td>
+      </tr>
+      <tr>
+        <td>9:00 - 9:25 (25 min)</td>
+        <td>Speaker 2</td>
+      </tr>
+      <tr>
+        <td>9:25 - 9:50 (25 min)</td>
+        <td>Speaker 3</td>
+      </tr>
+      <tr>
+        <td>9:50 - 10:20 (30 min)</td>
+        <td>Coffee break and poster session</td>
+      </tr>
+      <tr>
+        <td>10:20 - 10:50 (30 min)</td>
+        <td>6 Oral paper presentations (5 minutes each)</td>
+      </tr>
+      <tr>
+        <td>10:50 - 11:15 (25 min)</td>
+        <td>Speaker 4</td>
+      </tr>
+      <tr>
+        <td>11:15 - 11:40 (25 min)</td>
+        <td>Speaker 5</td>
+      </tr>
+      <tr>
+        <td>11:40 - 12:20 (40 min)</td>
+        <td>Panel discussion</td>
+      </tr>
+      <tr>
+        <td>12:20 - 12:30 (10 min)</td>
+        <td>Best paper award and closing remarks</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="section" id="organizers">
+    <h2>Organizers</h2>
+    <div class="people">
+      <a href="https://www.linkedin.com/in/james-jingxi-xu/">
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQGQrr25uJwOkQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1721932847513?e=2147483647&v=beta&t=OE-n4-HHJNnrJ9EfPhBL3DmCG0NNsKfJSrZvBSO3Dfs">
+        <div>James Jingxi Xu</div>
+        <div class="aff">Ant Group</div>
+      </a>
+
+      <a href="https://yx-wang.github.io/">
+        <img src="https://yx-wang.github.io/assets/images/profile_new.jpg">
+        <div>Yixuan Wang</div>
+        <div class="aff">Columbia University</div>
+      </a>
+
+      <a href="https://binghao-huang.github.io/">
+        <img src="https://binghao-huang.github.io/images/profile.jpg">
+        <div>Binghao Huang</div>
+        <div class="aff">Columbia University</div>
+      </a>
+
+      <a href="https://sxys.me/">
+        <img src="https://sxys.me/assets/img/prof_pic.jpg">
+        <div>Shaoxiong Yao</div>
+        <div class="aff">UIUC</div>
+      </a>
+
+      <a href="https://haozhi.io/">
+        <img src="https://haozhi.io/profile.jpg">
+        <div>Haozhi Qi</div>
+        <div class="aff">Amazon FAR & UChicago</div>
+      </a>
+
+      <a href="https://www.linkedin.com/in/stephanie-woodman/">
+        <img src="https://media.licdn.com/dms/image/v2/C4E03AQE6EgwXv3U7Wg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1580327622893?e=2147483647&v=beta&t=fxkMj4v5q2Ux_bCz2JLLmkLXjKOhRnIsBdLWTqn9s7k">
+        <div>Stephanie Woodman</div>
+        <div class="aff">Yale University</div>
+      </a>
+
+      <a href="https://hojungchoi.github.io/">
+        <img src="https://hojungchoi.github.io/assets/images/profile_pic_zoom.jpg">
+        <div>Hojung Choi</div>
+        <div class="aff">Stanford University</div>
+      </a>
+
+      <a href="https://www.linkedin.com/in/david-watkins-b01a3b5b/">
+        <img src="https://media.licdn.com/dms/image/v2/C4E03AQFhQCuVNlgpPg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1626388956172?e=2147483647&v=beta&t=YRV4GyW9OP62nz7w1g-BbGUa2qbIxMKp1t8xBqeZXwo">
+        <div>David Watkins</div>
+        <div class="aff">RAI Institute</div>
+      </a>
+
+      <a href="https://www.microsoft.com/en-us/research/people/tessh/">
+        <img src="https://www.microsoft.com/en-us/research/uploads/prod/2022/08/Tess-Hellebrekers-400x400-1.jpg">
+        <div>Tess Hellebrekers</div>
+        <div class="aff">Microsoft</div>
+      </a>
+
+      <a href="https://yilundu.github.io/">
+        <img src="https://yilundu.github.io/assets/img/prof_pic.jpg">
+        <div>Yilun Du</div>
+        <div class="aff">Harvard University</div>
+      </a>
+
+      <a href="https://www.csail.mit.edu/person/ted-adelson">
+        <img src="https://www.csail.mit.edu/sites/default/files/styles/headshot/public/images/migration/abelson-ted-web.jpg">
+        <div>Edward Adelson</div>
+        <div class="aff">MIT</div>
+      </a>
+
+    </div>
+  </div>
+
+  <div class="section" id="sponsor">
+    <h2>Sponsor</h2>
+  </div>
+
+  <div class="section" id="contact">
+    <h2>Contact</h2>
+    <div>For questions and comments, please contact us [email TBA].</a>
+    </div>
+  </div>
+
+  <div class="foot">
+    © RSS 2026 Tactile Sensing for Robotic Foundation Models Workshop
+  </div>
+</div>
+
+
+</body>
+
+</html>
