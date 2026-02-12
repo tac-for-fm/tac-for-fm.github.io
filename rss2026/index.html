@@ -41,79 +41,22 @@
   <div class="section" id="intro">
     <h2>Introduction</h2>
     <p>
-      As industry—across both startups and big tech—continues to scale up data collection
-      for robotic foundation models, what role should tactile sensing play in this new era? This
-      is a highly open-ended yet fundamental question for the field. Addressing it requires
-      answering a series of more specific questions along the way, covering the full stack of
-      hardware, integration/system, and algorithm/model training.
+      As industry—across both startups and big tech—continues to scale up data collection for robotic foundation models, what role should tactile sensing play in this new era? This is a highly open-ended yet fundamental question for the field. Addressing it requires answering a series of questions, covering the full stack of hardware, integration/system, and algorithm/model training. 
     </p>
 
     <h3>(1) Hardware: What tactile sensing should look like at scale</h3>
     <p>
-      In the foundation-model era, the central hardware question is no longer whether tactile
-      sensing is useful, but what form of tactile sensing can realistically scale across fleets of
-      data collectors or robots. As robotic foundation models push data collection to
-      unprecedented scale, tactile hardware faces a fundamental tension: richness vs.
-      scalability. Should the field pursue high-resolution, human-like tactile skins, or focus on
-      simpler, task-relevant signals that can be deployed across thousands of robots?
-    </p>
-    <p>
-      Specific open questions include: What is the minimum tactile signal that meaningfully
-      improves manipulation and interaction? Can low-cost, robust tactile sensors outperform
-      fragile, high-fidelity designs when deployed at scale? Where should touch live on the
-      robot—everywhere, or only at critical interaction points like fingertips and wrists? Rather
-      than asking how closely we can mimic human touch, this era invites us to ask: what
-      tactile sensing actually survives—and matters—at scale?
+      In the foundation-model era, the central hardware question is no longer whether tactile sensing is useful, but what form of tactile sensing can realistically scale across fleets of data collectors or robots. As robotic foundation models push data collection to unprecedented scale, tactile hardware faces a fundamental tension: richness vs. scalability. Traditionally, significant emphasis has been placed on tactile richness. However, given the new need to deploy tactile sensing at scale for robotics foundation models, we encourage researchers to reconsider which characteristics of touch sensors are truly essential for scalable, real-world use.
     </p>
 
     <h3>(2) Integration / System: How touch fits into robotic stacks</h3>
     <p>
-      The value of tactile sensing emerges only when it is meaningfully integrated into the
-      overall robotic system. Designing sensors that produce high-resolution, human-like
-      touch signals is one challenge; integrating them into compact, scalable, and reliable
-      systems is another.
-    </p>
-    <p>
-      A central open question concerns form factor. Many state-of-the-art camera-based
-      tactile sensors offer rich signals but adopt bulky, box-like designs, with limited sensing
-      around edges and corners. This makes them difficult to integrate into existing grippers
-      or to deploy on curved and articulated surfaces. In contrast, skin-like or deformable
-      tactile sensors are easier to attach across diverse geometries, but often produce noisier,
-      lower-dimensional signals with less consistent calibration. Balancing signal richness
-      with ease of integration remains unresolved.
-    </p>
-    <p>
-      Beyond the sensor itself, tactile integration introduces system-level complexity. Tactile
-      devices often require dedicated electronics, control boards, and communication
-      pipelines, adding friction to robotic systems and large-scale data collection platforms
-      that are already complex. Seamlessly synchronizing tactile sensing with vision,
-      proprioception, and control remains an open systems challenge—and a critical barrier to
-      scaling touch beyond isolated demonstrations.
+      The value of tactile sensing emerges only when it is meaningfully integrated into the overall robotic system. Beyond the sensor itself, tactile integration introduces system-level complexity. Tactile devices often require dedicated electronics and communication protocols, adding friction to already complex robotic systems and large-scale data collection platforms. Seamlessly synchronizing tactile sensing with vision, proprioception, and control remains an open systems challenge—and a critical barrier to scaling touch beyond isolated demonstrations.
     </p>
 
     <h3>(3) Algorithms / Model Training: How foundation models should use touch</h3>
     <p>
-      With scalable and easily integrable hardware in place, the final—and perhaps most
-      critical—question becomes: how do we effectively use tactile signals?
-    </p>
-    <p>
-      First, what role should simulation play? Is high-fidelity tactile simulation worth the
-      investment, given its promise for large-scale data generation, or do sim-to-real gaps
-      fundamentally limit its usefulness for touch?
-    </p>
-    <p>
-      Second, how should we learn tactile representations? What abstractions best capture
-      the information that matters for interaction—raw signals, learned latent embeddings, or
-      discrete contact events—and which of these representations generalize across sensor
-      designs and embodiments?
-    </p>
-    <p>
-      Finally, how should tactile sensing be incorporated into multimodal learning?
-      Synchronizing signals across modalities with vastly different frequencies is already
-      challenging, but learning effective multimodal representations is even harder. Should
-      models fuse all modalities jointly, learn meta-controllers that adaptively weight or switch
-      between them, or train modalities sequentially—using one to guide or supervise
-      another?
+      With scalable and easily integrable hardware in place, the final—and perhaps most critical—question becomes: how do we effectively use tactile signals? First, how should we learn tactile representations? What abstractions best capture the information that matters for interaction—raw signals, learned latent embeddings, or discrete contact events—and which of these representations generalize across sensor designs and embodiments? Secondly, how should tactile sensing be incorporated into multimodal learning? Should models fuse all modalities jointly, learn meta-controllers that adaptively weight or switch between them, or train modalities sequentially—using one to guide or supervise another?
     </p>
 
     <h3>Intended Audience</h3>
@@ -170,8 +113,8 @@
         <li>Scalable tactile design</li>
         <li>Novel tactile hardware</li>
         <li>Trade-offs between signal richness and scalability</li>
-        <li>Standards on tactile design</li>
-        <li>Tactile integration on the robot</li>
+        <li>Standards and principles for sensor design</li>
+        <li>Tactile integration</li>
         <li>Tactile benchmark and datasets</li>
         <li>Tactile simulation</li>
         <li>Synthetic tactile data</li>
@@ -180,7 +123,7 @@
         <li>Signal synchronization with touch</li>
         <li>Multimodal learning with touch</li>
         <li>Multimodal representation with touch</li>
-        <li>Manipulation with touch</li>
+        <li>Dexterous manipulation with touch</li>
         <li>Contact-rich manipulation</li>
         <li>Tactile grasping</li>
         <li>Novel robot capabilities with touch</li>
